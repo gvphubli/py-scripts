@@ -26,7 +26,7 @@ if __name__ == '__main__':
     chrome_options.add_argument("--headless --no-sandbox")
 
     # not being head-less you can see what is happening.
-    driver = webdriver.Chrome("C:\\Users\\GirishPatil\\Downloads\\chrome_driver\\chromedriver.exe")
+    driver = webdriver.Chrome("chromedriver.exe")
     driver.maximize_window()
 
     my_url = "https://www.pse.com/"
@@ -34,9 +34,9 @@ if __name__ == '__main__':
     driver.get(my_url)
 
             
-    driver.find_element_by_xpath('//*[@id="Username"]').send_keys("sonuvaish")
+    driver.find_element_by_xpath('//*[@id="Username"]').send_keys(USERID)
 
-    driver.find_element_by_xpath('//*[@id="Password"]').send_keys("/[D?N9qDiTvh6w")
+    driver.find_element_by_xpath('//*[@id="Password"]').send_keys(PASSWORD)
 
     # login clicked.
     driver.find_element_by_xpath('//*[@id="signin-btn"]').click()
